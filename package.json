@@ -9,6 +9,8 @@
     "webpack": "webpack",
     "prestart:dev": "npm run webpack",
     "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
+    "server": "nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite-server": "lite-server"
   },
@@ -35,6 +37,7 @@
     "@babel/preset-env": "^7.11.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
+    "concurrently": "^5.3.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-pwa-manifest": "^4.2.0"
