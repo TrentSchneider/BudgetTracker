@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#317EFB" />
+    <meta
+      name="description"
+      content="A budgeting app that allows for transactions to be made even when offline."
+    />
     <link
       rel="shortcut icon"
       href="assets/icons/icon-192x192.png"
@@ -27,7 +31,9 @@
       </div>
 
       <div class="form">
+        <label for="t-name">Name: </label>
         <input type="text" id="t-name" placeholder="Name of transaction" />
+        <label for="t-amount"> Amount: </label>
         <input
           type="number"
           min="0"
@@ -55,8 +61,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="assets/js/db.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="/dist/bundle.js"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
