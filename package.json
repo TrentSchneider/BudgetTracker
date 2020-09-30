@@ -8,6 +8,7 @@
     "start:prod": "npm run build && node server.js",
     "webpack": "webpack",
     "prestart:dev": "npm run webpack",
+    "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite-server": "lite-server"
   },
