@@ -4,10 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "npm run build && node server.js",
     "webpack": "webpack",
-    "prestart": "npm run webpack",
+    "prestart:dev": "npm run webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "lite-server": "lite-server"
   },
   "repository": {
@@ -23,6 +24,7 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1"
