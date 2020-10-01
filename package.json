@@ -4,6 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "webpack": "webpack",
+    "prestart": "npm run webpack",
     "start": "node server.js",
     "lite-server": "lite-server"
   },
@@ -20,7 +22,6 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "if-env": "^1.0.4",
     "lite-server": "^2.5.3",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1"
@@ -30,7 +31,6 @@
     "@babel/preset-env": "^7.11.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
-    "concurrently": "^5.3.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-pwa-manifest": "^4.2.0"
