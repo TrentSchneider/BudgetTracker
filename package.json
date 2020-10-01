@@ -10,7 +10,7 @@
     "prestart:dev": "npm run webpack",
     "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
     "server": "nodemon server.js --ignore client",
-    "build": "cd client && npm run build",
+    "build": "cd public && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite-server": "lite-server"
   },
