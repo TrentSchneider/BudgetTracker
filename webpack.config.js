@@ -12,11 +12,15 @@ const config = {
     new WebpackPwaManifest({
       name: "Budget Tracker",
       short_name: "Budget Tracker",
-      description: "A budgeting app that allows for transactions to be made even when offline.",
+      description:
+        "A budgeting app that allows for transactions to be made even when offline.",
       background_color: "#ffffff",
       theme_color: "#ffffff",
       "theme-color": "#ffffff",
       start_url: "/",
+      fingerprints: false,
+      inject: false,
+      filename: "manifest.webmanifest",
       icons: [
         {
           src: path.resolve("public/assets/icons/icon-192x192.png"),
@@ -29,8 +33,8 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js$/, 
-        exclude: /node_modules/, 
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
